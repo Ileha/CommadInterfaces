@@ -17,8 +17,8 @@ namespace CommadInterfaces
         public void AddCommand(Action<Command> commad_config) {
             Command for_add = new Command();
             commad_config.Invoke(for_add);
-			object curr_data = for_add.MyData.Invoke();
-            for_add.MyData = () => curr_data;
+			object curr_data = for_add.MyData();
+			for_add.SetData(curr_data);
             Repository.Add(for_add.Name.Invoke(), for_add);
         }
 

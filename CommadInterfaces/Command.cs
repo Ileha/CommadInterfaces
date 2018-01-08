@@ -16,5 +16,19 @@ namespace CommadInterfaces {
         public void OnExecute(params object[] arguments) {
             Execute(arguments);
         }
+
+		public void SetData(object data) {
+			MyData = () => data;
+		}
+
+		public T GetCommandData<T>() {
+			object data = MyData();
+			if (data is T) {
+				return (T)data;
+			}
+			else {
+				throw new TypeAccessException();
+			}
+		}
     }
 }
