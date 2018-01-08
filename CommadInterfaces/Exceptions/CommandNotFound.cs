@@ -17,4 +17,18 @@ namespace CommadInterfaces.Exceptions
             return Message;
         }
     }
+	public class ArgumentCountExeption : Exception
+	{
+		private string Message;
+
+		public ArgumentCountExeption(int arg_count)
+		{
+			Message = "you need " + arg_count + " arguments";
+		}
+
+		public override string ToString()
+		{
+			return Message;
+		} 
+	}
 }
