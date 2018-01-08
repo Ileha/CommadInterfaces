@@ -10,7 +10,7 @@ namespace CommadInterfaces {
     public class Command {
         public Func<string> Name;
         public DCommand Execute;
-		public Func<Data> MyData;
+		public Func<object> MyData;
 		public Func<int> ArgumentsCount;
 
         public void OnExecute(params object[] arguments) {

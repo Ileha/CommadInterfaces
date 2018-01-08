@@ -42,7 +42,6 @@
     <Compile Include="Exceptions\CommandNotFound.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Command.cs" />
-    <Compile Include="Data.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
