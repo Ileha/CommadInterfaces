@@ -12,6 +12,7 @@ namespace CommadInterfaces {
         public DCommand Execute;
 		public Func<object> MyData;
 		public Func<int> ArgumentsCount;
+        public bool Active = true;
 
         public void OnExecute(params object[] arguments) {
             Execute(arguments);

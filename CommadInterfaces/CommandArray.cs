@@ -22,7 +22,7 @@ namespace CommadInterfaces
             Repository.Add(for_add.Name.Invoke(), for_add);
         }
 
-        public void Execute(string name, params object[] arguments) {
+        public Command GetCommand(string name) {
             Command exe;
             try {
                 exe = Repository[name];
@@ -30,6 +30,12 @@ namespace CommadInterfaces
             catch (Exception err) {
                 throw new CommandNotFound(name);
             }
+            return exe;
+        }
+
+        public void Execute(string name, params object[] arguments) {
+            Command exe = GetCommand(name);
+            if (exe.Active == false) { }
 			if (exe.ArgumentsCount() > arguments.Length) {
 				throw new ArgumentCountExeption(exe.ArgumentsCount());
 			}

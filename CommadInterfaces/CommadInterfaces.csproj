@@ -39,8 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\CommandDisable.cs" />
     <Compile Include="Exceptions\CommandNotFound.cs" />
-    <Compile Include="Main.cs" />
+    <Compile Include="CommandArray.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
